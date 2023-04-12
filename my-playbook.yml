@@ -1,5 +1,5 @@
 ---
-
+# if we are using roles, you done put this in
  - name: setting up the system
    hosts: webserver
    become: true
