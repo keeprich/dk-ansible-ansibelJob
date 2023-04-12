@@ -1,0 +1,30 @@
+---
+
+ - name: setting up the system
+   hosts: webserver
+   become: true
+   tasks:
+
+    - name: create user
+      user:
+        name: sef
+        comment: "Sefakor Ama"
+
+    - name: create file
+      file:
+        dest: /tmp/kenneth.txt
+        state: touch
+
+    - name: create directory
+      file:
+        dest: /tmp/my_ken
+        state: directory
+        mode: '0777'
+
+      yum:
+        name: httpd
+        state: latest
+    - name: start and enable httpd
+      service:
+         name: httpd
+         state: started
