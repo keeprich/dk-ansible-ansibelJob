@@ -7,6 +7,11 @@ Checking for ssh connection
 To Connect to Other ansible nodes
 
 ## Create a key and copy the public keys to the other server
+```
+1. ssh-keygen
+2. cd to the path of the keys
+3. ssh-copy-id IP address of server
+```
 
 # To run git commands in a virtual server, use the ssh.
 
