@@ -4,6 +4,9 @@
 
 
 Checking for ssh connection
+To Connect to Other ansible nodes
+
+## Create a key and copy the public keys to the other server
 
 # To run git commands in a virtual server, use the ssh.
 
