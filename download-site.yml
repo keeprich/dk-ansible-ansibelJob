@@ -18,4 +18,4 @@
       name: wget
       state: latest
   - name: Download website from the internet using wget
-    command: wget -r -np -nH {{ website_url }} -P /var/www/html
+    command: wget -r -np -nH --cut-dirs=1 -R index.html {{ website_url }} -P /var/www/html
