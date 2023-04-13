@@ -3,7 +3,7 @@
   hosts: webserver
   become: true
   vars:
-    website_url: "https://www.free-css.com/assets/files/free-css-templates/download/page289/bluene.zip"
+    website_url: "https://datakloudservice.com/"
   tasks:
   - name: Install httpd
     yum:
