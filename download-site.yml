@@ -3,7 +3,7 @@
   hosts: webserver
   become: true
   vars:
-    website_url: "https://datakloudservice.com/"
+    website_url: "https://www.free-css.com/assets/files/free-css-templates/download/page287/covido.zip"
   tasks:
   - name: Install httpd
     yum:
@@ -21,4 +21,4 @@
       name: unzip
       state: latest
   - name: Download website from the internet using wget
-    command: wget -r {{ website_url }} -P /var/www/html
+    command: wget -r -np -nH --cut-dirs=1 -R index.html {{ website_url }} -P /var/www/html/
