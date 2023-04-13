@@ -1,0 +1,21 @@
+---
+- name: Install httpd and wget website
+  hosts: webserver
+  become: true
+  vars:
+    website_url: "https://www.free-css.com/assets/files/free-css-templates/download/page289/bluene.zip"
+  tasks:
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: latest
+  - name: Start httpd service
+    service:
+      name: httpd
+      state: started
+  - name: Install wget
+    yum:
+      name: wget
+      state: latest
+  - name: Download website using wget
+    command: wget -r -np -nH {{ website_url }} -P /var/www/html
