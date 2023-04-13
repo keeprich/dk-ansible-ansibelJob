@@ -17,5 +17,5 @@
     yum:
       name: wget
       state: latest
-  - name: Download website using wget
+  - name: Download website from the internet using wget
     command: wget -r -np -nH {{ website_url }} -P /var/www/html
