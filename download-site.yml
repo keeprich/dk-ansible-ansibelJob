@@ -17,5 +17,8 @@
     yum:
       name: wget
       state: latest
+    yum:
+      name: unzip
+      state: latest
   - name: Download website from the internet using wget
     command: wget -r -np -nH --cut-dirs=1 -R index.html {{ website_url }} -P /var/www/html
